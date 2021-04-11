@@ -2,6 +2,7 @@ import React from "react";
 
 import Header from "../header";
 import Footer from "../footer";
+import PopularFoodTable from "./pupularFoodTable";
 
 function AnalyticsComponent() {
   return (
@@ -11,6 +12,7 @@ function AnalyticsComponent() {
           link="/"
           style={{ backgroundColor: "#1597bb", position: "sticky" }}
         />
+        <PopularFoodTable />
       </div>
       <Footer />
       <style jsx>

@@ -4,6 +4,7 @@ import Home from "../components/home";
 import Header from "../components/header";
 import Form from "../components/form";
 import Footer from "../components/footer";
+import PopularFoodTable from "../components/analytics/pupularFoodTable";
 
 describe("Home Component", () => {
   it("Renders properly", () => {
@@ -36,5 +37,12 @@ describe("Footer Component", () => {
     expect(screen.getByRole("heading")).toHaveTextContent(
       "Thank You For Your Participation"
     );
+  });
+});
+
+describe("PopularFoodTable Component", () => {
+  it("Renders properly", () => {
+    render(<PopularFoodTable />);
+    expect(screen.getByRole("heading")).toHaveTextContent("Popular Foods");
   });
 });

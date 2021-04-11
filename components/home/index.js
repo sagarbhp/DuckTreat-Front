@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Header from "../header";
+import TextInput from "../StyledComponents/TextInput";
 
 //Icon
 import ArrowDownwardIcon from "@material-ui/icons/ArrowDownward";
@@ -28,6 +29,7 @@ function HomeComponent() {
             <ArrowDownwardIcon fontSize="large" style={{ color: "white" }} />
           </IconButton>
         </Collapse>
+        <TextInput />
       </div>
       <style jsx>
         {`

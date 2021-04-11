@@ -5,6 +5,7 @@ import Header from "../components/header";
 import Form from "../components/form";
 import Footer from "../components/footer";
 import PopularFoodTable from "../components/analytics/pupularFoodTable";
+import DataByCountry from "../components/analytics/dataByCountry";
 
 describe("Home Component", () => {
   it("Renders properly", () => {
@@ -44,5 +45,12 @@ describe("PopularFoodTable Component", () => {
   it("Renders properly", () => {
     render(<PopularFoodTable />);
     expect(screen.getByRole("heading")).toHaveTextContent("Popular Foods");
+  });
+});
+
+describe("DataByCountry Component", () => {
+  it("Renders properly", () => {
+    render(<DataByCountry />);
+    expect(screen.getByRole("heading")).toHaveTextContent("Country Data");
   });
 });

@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Header from "../header";
-import TextInput from "../StyledComponents/TextInput";
 
 //Icon
 import ArrowDownwardIcon from "@material-ui/icons/ArrowDownward";
 import { Collapse, IconButton } from "@material-ui/core";
+import Form from "../form";
 
 function HomeComponent() {
   const [checked, setChecked] = useState(false);
@@ -29,8 +29,8 @@ function HomeComponent() {
             <ArrowDownwardIcon fontSize="large" style={{ color: "white" }} />
           </IconButton>
         </Collapse>
-        <TextInput />
       </div>
+      <Form />
       <style jsx>
         {`
           .home-root {

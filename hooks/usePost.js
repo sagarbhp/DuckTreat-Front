@@ -50,7 +50,7 @@ function usePost(link) {
         setError(true);
         setLoading(null);
         if (onError) {
-          onError(data);
+          onError(err);
         }
       }
     }

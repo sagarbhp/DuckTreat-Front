@@ -1,17 +1,28 @@
 import React, { useState, useEffect } from "react";
 import Header from "../header";
+import Footer from "../footer";
+import Form from "../form";
 
 //Icon
 import ArrowDownwardIcon from "@material-ui/icons/ArrowDownward";
 import { Collapse, IconButton } from "@material-ui/core";
-import Form from "../form";
 
 function HomeComponent() {
   const [checked, setChecked] = useState(false);
 
+  //onrender starts animation
   useEffect(() => {
     setChecked(true);
   }, []);
+
+  // if user clicks the down arrow handleScroll fires and scrolls
+  // the user to the form
+  const handleScroll = () => {
+    let form = document.getElementById("form");
+    form.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
   return (
     <div className="home-root">
       <Header link="/analytics" />
@@ -25,12 +36,13 @@ function HomeComponent() {
             Welcome to <br /> Duck
             <span className="home-color-text">Treats</span>{" "}
           </h1>
-          <IconButton>
+          <IconButton onClick={handleScroll}>
             <ArrowDownwardIcon fontSize="large" style={{ color: "white" }} />
           </IconButton>
         </Collapse>
       </div>
       <Form />
+      <Footer />
       <style jsx>
         {`
           .home-root {

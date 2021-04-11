@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import TextInput from "../StyledComponents/TextInput";
-import { Button } from "@material-ui/core";
+import { Button, CircularProgress } from "@material-ui/core";
 import Checkbox from "../StyledComponents/Checkbox";
 import usePost from "../../hooks/usePost";
 import Swal from "sweetalert2";
@@ -136,7 +136,7 @@ function Form() {
                   Submit
                 </Button>
               ) : (
-                <p>Loading ... </p>
+                <CircularProgress />
               )}
             </div>
           </form>

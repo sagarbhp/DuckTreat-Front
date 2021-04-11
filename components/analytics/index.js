@@ -4,6 +4,7 @@ import Header from "../header";
 import Footer from "../footer";
 import PopularFoodTable from "./pupularFoodTable";
 import DataByCountry from "./dataByCountry";
+import PaginatedData from "./paginatedData";
 
 function AnalyticsComponent() {
   return (
@@ -15,6 +16,7 @@ function AnalyticsComponent() {
         />
         <PopularFoodTable />
         <DataByCountry />
+        <PaginatedData />
       </div>
       <Footer />
 

@@ -6,6 +6,7 @@ import Form from "../components/form";
 import Footer from "../components/footer";
 import PopularFoodTable from "../components/analytics/pupularFoodTable";
 import DataByCountry from "../components/analytics/dataByCountry";
+import PaginatedData from "../components/analytics/paginatedData";
 
 describe("Home Component", () => {
   it("Renders properly", () => {
@@ -52,5 +53,12 @@ describe("DataByCountry Component", () => {
   it("Renders properly", () => {
     render(<DataByCountry />);
     expect(screen.getByRole("heading")).toHaveTextContent("Country Data");
+  });
+});
+
+describe("PaginatedData Compont", () => {
+  it("Renders properly", () => {
+    render(<PaginatedData />);
+    expect(screen.getByRole("heading")).toHaveTextContent("Input Data");
   });
 });

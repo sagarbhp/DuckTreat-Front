@@ -12,10 +12,11 @@ import Paper from "@material-ui/core/Paper";
 import Spinner from "../StyledComponents/Spinner";
 import ErrorMessage from "../StyledComponents/ErrorMessage";
 
+//constant
+import { API_ROOT } from "../../constants/key";
+
 function DataByCountry() {
-  const { data, error, loading } = useGet(
-    "http://localhost:9000/data-by-country"
-  );
+  const { data, error, loading } = useGet(`${API_ROOT}/data-by-country`);
   return (
     <div className="countryTable-root">
       <h1>Country Data</h1>

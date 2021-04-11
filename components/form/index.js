@@ -47,7 +47,7 @@ function Form() {
         setDuckCount("");
         setEmail("");
         setCountry("");
-        setChecked(false);
+
         Swal.fire("Success!", data.message, "success");
       },
       onError: (err) => {
@@ -85,7 +85,7 @@ function Form() {
             />
             <div className="form-two-column-row">
               <TextInput
-                label="Where did you feed the ducks *"
+                label="Where did you feed the ducks? *"
                 state={location}
                 setState={setLocation}
                 required={true}
@@ -99,19 +99,19 @@ function Form() {
               />
             </div>
             <TextInput
-              label="How many ducks did you feed *"
+              label="How many ducks did you feed? *"
               state={duckCount}
               setState={setDuckCount}
               type="number"
               required={true}
             />
             <TextInput
-              label="What kind of food did you feed the ducks"
+              label="What kind of food did you feed the ducks?"
               state={foodType}
               setState={setFoodType}
             />
             <TextInput
-              label="How much food did you feed the ducks (in grams)"
+              label="How much food did you feed the ducks (in grams)?"
               state={foodAmount}
               setState={setFoodAmount}
               type="number"

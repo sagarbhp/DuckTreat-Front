@@ -60,7 +60,7 @@ function PaginatedData() {
 
                     <TableCell align="right">{row.country}</TableCell>
                     <TableCell align="right">{row.foodAmount}</TableCell>
-                    <TableCell align="right">{row.ducksFed}</TableCell>
+                    <TableCell align="right">{row.duckCount}</TableCell>
                     <TableCell align="right">
                       {new Date(row.feedTime).toLocaleDateString()}
                     </TableCell>
